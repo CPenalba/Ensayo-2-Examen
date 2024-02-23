@@ -1,0 +1,14 @@
+Libreria\dao\LibroDAO.class
+Libreria\service\LibroService.class
+Libreria\dao\ComentarioImplDAO.class
+Libreria\dao\ComentarioDAO.class
+Libreria\dao\PersonaDAO.class
+Libreria\Main.class
+Libreria\model\Persona.class
+Libreria\model\Comentario.class
+Libreria\dao\PersonaImplDAO.class
+Libreria\service\ComentarioService.class
+Libreria\model\Libro.class
+Libreria\service\PersonaService.class
+Libreria\utils\HibernateUtil.class
+Libreria\dao\LibroImplDAO.class
