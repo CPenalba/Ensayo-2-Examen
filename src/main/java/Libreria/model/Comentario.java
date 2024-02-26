@@ -27,7 +27,7 @@ public class Comentario {
     private Long id;
 
     @Column(name = "valoracion")
-    private int valoracion;
+    private Integer valoracion;
 
     @Column(name = "comentario")
     private String comentario;
@@ -43,7 +43,7 @@ public class Comentario {
     public Comentario() {
     }
 
-    public Comentario(int valoracion, String comentario) {
+    public Comentario(Integer valoracion, String comentario) {
         this.valoracion = valoracion;
         this.comentario = comentario;
     }
@@ -52,7 +52,7 @@ public class Comentario {
         this.comentario = comentario;
     }
 
-    public Comentario(int valoracion) {
+    public Comentario(Integer valoracion) {
         this.valoracion = valoracion;
     }
 
@@ -62,14 +62,6 @@ public class Comentario {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getValoracion() {
-        return valoracion;
-    }
-
-    public void setValoracion(int valoracion) {
-        this.valoracion = valoracion;
     }
 
     public String getComentario() {
@@ -94,6 +86,14 @@ public class Comentario {
 
     public void setLibro(Libro libro) {
         this.libro = libro;
+    }
+
+    public Integer getValoracion() {
+        return valoracion;
+    }
+
+    public void setValoracion(Integer valoracion) {
+        this.valoracion = valoracion;
     }
 
 }
