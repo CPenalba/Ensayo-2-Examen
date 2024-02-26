@@ -30,9 +30,14 @@ public class PersonaService {
         persona.getLibrosLeidos().add(libro);
         pd.updatePersona(persona);
     }
+
     public void addLibroEscrito(Persona persona, Libro libro) {
         persona.getLibrosEscritos().add(libro);
         pd.updatePersona(persona);
     }
-   
+
+    public Persona logIn(String nombreUsuario, String contraseña) {
+        Persona p = pd.getPersona(nombreUsuario);
+        return p != null && p.getContraseña().equals(contraseña) ? p : null;
+    }
 }

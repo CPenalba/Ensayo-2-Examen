@@ -70,5 +70,22 @@ public class PersonaImplDAO implements PersonaDAO {
 
     }
 
+    @Override
+    public Persona getPersona(String nombreUsuario) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            CriteriaBuilder builder = session.getCriteriaBuilder();
+            CriteriaQuery<Persona> query = builder.createQuery(Persona.class);
+            Root<Persona> userRoot = query.from(Persona.class);
+            query.where(
+                    builder.or(
+                            builder.equal(userRoot.get("nombreUsuario"), nombreUsuario),
+                            builder.equal(userRoot.get("correo"), nombreUsuario)
+                    )
+            );
+            return session.createQuery(query).getSingleResult();
+        } catch (NoResultException error) {
+            System.err.println(error.getMessage());
+            return null;
+        }
+    }
 }
-

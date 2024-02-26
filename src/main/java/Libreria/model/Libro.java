@@ -34,10 +34,10 @@ public class Libro {
     @Column(name = "numeroPaginas")
     private int numeroPaginas;
 
-    @ManyToMany(mappedBy = "librosLeidos", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "librosLeidos")
     private List<Persona> lectores = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "librosEscritos", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "librosEscritos")
     private List<Persona> autores = new ArrayList<>();
 
     @OneToMany(mappedBy = "libro", cascade = CascadeType.ALL)

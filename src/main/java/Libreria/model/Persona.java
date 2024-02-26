@@ -148,5 +148,4 @@ public class Persona {
     public void setComentarios(List<Comentario> comentarios) {
         this.comentarios = comentarios;
     }
-
 }

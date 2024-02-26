@@ -46,7 +46,7 @@ public class Main {
 
         Comentario c4 = new Comentario(5, "Me encanta");
         cs.addComentario(p2, l2, c3); //esto no me lo hace // un libro puede ser comentado por varias personas
-
+        
         ps.addLibroLeido(p2, l2);
         ps.addLibroLeido(p2, l1);
         ps.addLibroLeido(p1, l2);
@@ -63,6 +63,12 @@ public class Main {
         Libro l4 = new Libro("El principito", 565);
         Persona p4 = new Persona("Peter", "peter_soldado", "peter74", "peter@gmail.com");
         ps.addLibroEscrito(p4, l4);
+        
+        Comentario c5 = new Comentario(4);
+        cs.addComentario(p4, l4, c5);
+        
+        Comentario c6 = new Comentario("Muy bonito"); //me pone en la valorion 0 y quiero que sea null
+        cs.addComentario(p3, l3, c6);
 
         List<Libro> list1 = pid.getLibrosLeidosByPersona(p2);
         for (Libro libro : list1) {
@@ -71,5 +77,11 @@ public class Main {
 
         System.out.println("Todos los libros: " + lid.getAllLibros());
 
+        Persona userLogged = ps.logIn("carolina.penalba", "penalba12");
+        if (userLogged != null) {
+            System.out.println("Usuario y contraseña correctos");
+        } else {
+            System.out.println("Error en el usuario o en la contraseña");
+        }
     }
 }

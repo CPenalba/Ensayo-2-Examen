@@ -48,6 +48,14 @@ public class Comentario {
         this.comentario = comentario;
     }
 
+    public Comentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public Comentario(int valoracion) {
+        this.valoracion = valoracion;
+    }
+
     public Long getId() {
         return id;
     }

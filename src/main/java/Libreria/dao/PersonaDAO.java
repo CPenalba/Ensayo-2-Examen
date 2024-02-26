@@ -20,4 +20,5 @@ public interface PersonaDAO {
 
     List<Libro> getLibrosLeidosByPersona(Persona persona);
 
+    Persona getPersona(String nombreUsuario);
 }
